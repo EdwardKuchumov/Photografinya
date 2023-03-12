@@ -61,3 +61,8 @@ body{
     }
 }
 
+@media (max-width: 622px){
+    .header__list{
+        display: none;
+    }
+}
