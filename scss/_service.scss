@@ -1,0 +1,73 @@
+.blocks {
+
+    // .blocks__service
+
+    &__service {
+        background-color: #251D1A;
+    }
+}
+.service {
+
+    // .service__header
+
+    &__header {
+        padding-top: 60px;
+    }
+
+    // .service__cant
+
+    &__cant {
+        padding-top: 50px;
+    }
+
+    // .service__list
+
+    &__list {
+    }
+
+    // .service__item
+
+    &__item {
+    }
+
+    // .service__img
+
+    &__img {
+        
+    }
+
+    // .service__item-head
+
+    &__item-head {
+        padding-top: 20px;
+    }
+
+    // .service__item-text
+
+    &__item-text {
+        padding-top: 20px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        padding-bottom: 50px;
+    }
+
+    // .service__item-more
+
+    &__item-more {
+        
+    }
+}
+
+.swiper {
+}
+.mySwiper2 {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+    background: rgb(0, 0, 0, 0);
+}
+.swiper-slide img{
+    height: 250px;
+}
