@@ -6,58 +6,48 @@
     &__block {
         background: #251D1A;
         padding: 60px 0;
+        .footer__VKlink{
+            color: #fff;
+        }
+        .footer__VKlink svg{
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid#ffffff;
+            transition: 0.5s;
+        }
+        .footer__VKlink svg:hover{
+            background-color: #fff;
+            color: #000;
+            transition: 0.5s;
+        }
     }
 }
-.header {
+.footer__contactsBlock{
+    display: flex;
+}
+.footer {
 
-    // .header__block
-
-    &__block {
-    }
-
-    // .header__navBlock
-
-    &__navBlock {
-    }
-
-    // .header__nav
-
-    &__nav {
-    }
-
-    // .header__list
-
-    &__list {
-    }
-
-    // .header__item
-
-    &__item {
-        
-    }
-
-    // .header__itemLink
-
-    &__itemLink {
-    }
-
-    // .header__contactsBlock
+    // .footer__contactsBlock
 
     &__contactsBlock {
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
-    // .header__contactVK
+    // .footer__contactVK
 
     &__contactVK {
-        
+
     }
 
-    // .header__VKlink
+    // .footer__VKlink
 
     &__VKlink {
     }
 
-    // .header__contactInsta
+    // .footer__contactInsta
 
     &__contactInsta {
     }

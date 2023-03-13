@@ -15,7 +15,7 @@
     // .blocks__head
 
     &__head {
-        
+        opacity: 0;
         padding-left: 50px;
         text-align-last: left;
         padding-top: 40px;
@@ -23,6 +23,7 @@
         font-size: 70px;
         line-height: 110%;
         color: #baa192;
+        animation: slideFORleft 1s ease forwards;
     }
 
     // .blocks__text
@@ -34,6 +35,7 @@
         line-height: 150%;
         text-align: left;
         max-width: 49%;
+        animation: slideFORleft 1s ease forwards;
     }
 
     // .blocks__back
@@ -92,4 +94,14 @@
     background-color: #fff;
     border-radius: 50%;
     padding: 5px;
+}
+@keyframes slideFORleft{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }    
 }

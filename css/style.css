@@ -24,6 +24,12 @@
   align-items: center;
   gap: 20px;
 }
+.header__list a {
+  display: inline-block;
+  opacity: 0;
+  animation: slideFORtop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
 .header__itemLink {
   padding: 10px;
   transition: all 0.5s;
@@ -37,11 +43,25 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  animation: slideFORright 1s ease forwards;
 }
 .header__contactVK {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.header__VKlink svg {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  transition: 0.5s;
+  color: #000;
+}
+.header__VKlink svg:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transition: 0.5s;
 }
 .header__contactInsta {
   display: flex;
@@ -49,11 +69,31 @@
   gap: 10px;
 }
 
-.header img {
+.header svg {
   width: 30px;
   height: 30px;
 }
 
+@keyframes slideFORtop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideFORright {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 .blocks {
   position: relative;
   top: 0;
@@ -66,6 +106,7 @@
   padding-bottom: 29%;
 }
 .blocks__head {
+  opacity: 0;
   padding-left: 50px;
   -moz-text-align-last: left;
        text-align-last: left;
@@ -74,6 +115,7 @@
   font-size: 70px;
   line-height: 110%;
   color: #baa192;
+  animation: slideFORleft 1s ease forwards;
 }
 .blocks__text {
   padding-top: 100px;
@@ -82,6 +124,7 @@
   line-height: 150%;
   text-align: left;
   max-width: 49%;
+  animation: slideFORleft 1s ease forwards;
 }
 .blocks__back {
   display: none;
@@ -116,6 +159,16 @@
   padding: 5px;
 }
 
+@keyframes slideFORleft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 .example__header {
   padding-top: 60px;
 }
@@ -134,6 +187,9 @@
 .example__button1 {
   transition: all 0.5s;
 }
+.example__button1 a {
+  color: #aa0000;
+}
 .example__button1:hover {
   transition: all 0.5s;
   background-color: #000000;
@@ -149,6 +205,8 @@
   color: #ffffff;
 }
 .example__button-link {
+  display: block;
+  cursor: pointer;
   padding: 10px 20px;
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #000000;
@@ -233,7 +291,7 @@
 .service__item-head {
   color: #000;
   padding-bottom: 20px;
-  font-size: 20px;
+  font-size: 16px;
 }
 .service__item-more {
   position: absolute;
@@ -257,7 +315,7 @@
 }
 
 .book__head {
-  padding-top: 60px;
+  padding-top: 120px;
 }
 .book__forms {
   text-align: center;
@@ -312,7 +370,7 @@
 input {
   background-color: #000;
   padding: 10px;
-  width: 500px;
+  width: 100%;
   color: white;
 }
 
@@ -331,7 +389,31 @@ svg {
   background: #251D1A;
   padding: 60px 0;
 }
+.footer__block .footer__VKlink {
+  color: #fff;
+}
+.footer__block .footer__VKlink svg {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  transition: 0.5s;
+}
+.footer__block .footer__VKlink svg:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 0.5s;
+}
 
+.footer__contactsBlock {
+  display: flex;
+}
+
+.footer__contactsBlock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .about__header {
   padding-top: 60px;
 }
@@ -474,8 +556,22 @@ body {
   line-height: 160%;
 }
 
-@media (max-width: 622px) {
-  .header__list {
+.blocks {
+  padding: 0 5px;
+}
+
+@media (max-width: 780px) {
+  .header__nav {
     display: none;
+  }
+  .service__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .blocks__head {
+    font-size: 30px;
+  }
+  .example__buttonBlock {
+    flex-direction: column;
+    align-items: center;
   }
 }

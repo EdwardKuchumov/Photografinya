@@ -40,6 +40,13 @@
         justify-content: center;
         align-items: center;
         gap: 20px;
+
+    }
+    &__list a{
+        display: inline-block;
+        opacity: 0;
+        animation: slideFORtop .5s ease forwards;
+        animation-delay: calc(.2s * var(--i));
     }
 
     // .header__item
@@ -66,6 +73,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        animation: slideFORright 1s ease forwards;
     }
 
     // .header__contactVK
@@ -74,27 +82,64 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        
     }
 
     // .header__VKlink
 
-    &__VKlink {
+    &__VKlink{
+        
     }
 
     // .header__VKlogo
 
     &__VKlogo {
+        
+    }
+    &__VKlink svg{
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+        border: 1px solid#000000;
+        transition: 0.5s;
+        color: #000;
+    }
+    &__VKlink svg:hover{
+        background-color: #000000;
+        color: #ffffff;
+        transition: 0.5s;
     }
 
     // .header__contactInsta
 
     &__contactInsta {
+        
         display: flex;
         align-items: center;
         gap: 10px;
     }
 }
-.header img{
+.header svg{
     width: 30px;
     height: 30px;
+}
+@keyframes slideFORtop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }    
+}
+@keyframes slideFORright{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }    
 }

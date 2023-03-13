@@ -51,6 +51,9 @@
     &__button1 {
         transition: all 0.5s;
     }
+    &__button1 a{
+        color: #aa0000;
+    }
     &__button1:hover{
         transition: all 0.5s;
         background-color: #000000;
@@ -69,6 +72,8 @@
     // .example__button-link
 
     &__button-link {
+        display: block;
+        cursor: pointer;
         padding: 10px 20px;
         background-color: rgb(0, 0, 0, 0);
         border: 1px solid#000000;
