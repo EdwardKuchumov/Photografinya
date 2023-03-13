@@ -315,7 +315,7 @@
 }
 
 .book__head {
-  padding-top: 120px;
+  padding-top: 60px;
 }
 .book__forms {
   text-align: center;
@@ -557,7 +557,7 @@ body {
 }
 
 .blocks {
-  padding: 0 5px;
+  padding: 120 5px;
 }
 
 @media (max-width: 780px) {
