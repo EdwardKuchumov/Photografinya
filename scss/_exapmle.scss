@@ -1,10 +1,13 @@
+.blocks__example{
+    
+}
 .example {
     
 
     // .example__header
 
     &__header {
-        padding-top: 120px;
+        padding-top: 60px;
         
     }
 
@@ -46,20 +49,20 @@
     // .example__button1
 
     &__button1 {
-        
+        transition: all 0.5s;
     }
     &__button1:hover{
         transition: all 0.5s;
-        background-color: #ffffff;
+        background-color: #000000;
         .example__button-link{
-            color: #000;
+            color: #ffffff;
         }
     }
     &__button2:hover{
         transition: all 0.5s;
-        background-color: #ffffff;
+        background-color: #000000;
         .example__button-link{
-            color: #000;
+            color: #ffffff;
         }
     }
 
@@ -68,23 +71,24 @@
     &__button-link {
         padding: 10px 20px;
         background-color: rgb(0, 0, 0, 0);
-        border: 1px solid#fff;
+        border: 1px solid#000000;
         font-weight: 700;
         font-size: 20px;
         line-height: 152%;
-        color: #fff;
+        color: #000;
         transition: all 0.5s;
     }
 
     // .example__button2
 
     &__button2 {
+        transition: all 0.5s;
     }
 }
 
 .example__cant{
     height: 700px;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding-top: 60px;
 }

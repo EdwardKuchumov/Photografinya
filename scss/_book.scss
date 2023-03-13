@@ -1,0 +1,88 @@
+.blocks__book{
+    background-color: #e7dacd;
+}
+.book {
+
+    // .book__head
+
+    &__head {
+        padding-top: 60px;
+    }
+
+    // .book__forms
+
+    &__forms {
+        text-align: center;
+    }
+
+    // .book__name
+
+    &__name {
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        gap: 5px;
+        fill: #000;
+    }
+
+    // .book__email
+    &__name-link{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    &__email {
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        gap: 8px;
+        fill: #000;
+    }
+    &__email-link{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    // .book__buttons
+
+    &__buttons {
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+
+    // .book__but
+
+    &__but {
+        padding: 10px 20px;
+        background-color: rgb(0, 0, 0, 0);
+        border: 1px solid#ffff;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 152%;
+        color: #ffff;
+        transition: all 0.5s;
+    }
+    &__but:hover{
+        background-color: #fff;
+        color: #000;
+        transition: all 0.5s;
+    }
+}
+input{
+    background-color: #000;
+    padding: 10px;
+    width: 500px;
+    color: #ffff;
+}
+label{
+    padding-bottom: 10px;
+    color: #000;
+}
+svg{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 8px;
+}

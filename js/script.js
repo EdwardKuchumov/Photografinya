@@ -19,33 +19,16 @@
 
 //   });
 let swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 30,
+  slidesPerView: 3,
+  spaceBetween: 0,
   loop: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-    dynamicBullets: true,
+    // dynamicBullets: true,
   },
   autoplay: {
-    dalay: 500,
-    stoponLastSlide: true,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-let swiper2 = new Swiper(".mySwiper2", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  autoplay: {
-    dalay: 1500,
+    dalay: 1000,
     stoponLastSlide: true,
     disableOnInteraction: false,
   },

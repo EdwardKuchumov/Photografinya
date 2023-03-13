@@ -1,13 +1,8 @@
-.blocks {
-
-    // .blocks__service
-
-    &__service {
-        background-color: #251D1A;
-    }
+.blocks__service{
+    background-color: #fff;
 }
 .service {
-
+    
     // .service__header
 
     &__header {
@@ -23,51 +18,60 @@
     // .service__list
 
     &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        align-self: center;
+        padding-bottom: 60px;
+        text-align: center;
+        gap: 20px;
     }
 
     // .service__item
 
     &__item {
+        position: relative;
+
+        
     }
 
     // .service__img
 
     &__img {
-        
+        object-fit: cover;
+        width: 100%;
     }
 
     // .service__item-head
 
     &__item-head {
-        padding-top: 20px;
+        color: #000;
+        padding-bottom: 20px;
+        font-size: 20px;
     }
 
     // .service__item-text
 
-    &__item-text {
-        padding-top: 20px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
-        padding-bottom: 50px;
-    }
 
     // .service__item-more
 
     &__item-more {
-        
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        color: #fff;
+        text-transform: uppercase;
+        // border-radius: 20px;
+        padding: 10px 20px;
+        transition: all 0.5s;
+        background-color: rgb(255, 255, 255, 0.5);
+
+    }
+    &__item-more:hover{
+        background-color: #fff;
+        color: #000;
+        transition: all 0.5s;
     }
 }
 
-.swiper {
-}
-.mySwiper2 {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-    background: rgb(0, 0, 0, 0);
-}
-.swiper-slide img{
-    height: 250px;
-}

@@ -1,0 +1,34 @@
+.blocks {
+
+    // .blocks__about
+
+    &__about {
+    }
+}
+.about {
+
+    // .about__header
+
+    &__header {
+        padding-top: 60px;
+    }
+
+    // .about__content
+
+    &__content {
+        color: #000;
+        padding-top: 20px;
+    }
+}
+.headerall {
+
+    // .headerall__head
+
+    &__head {
+    }
+
+    // .headerall__text
+
+    &__text {
+    }
+}

@@ -3,6 +3,27 @@
 @import '_title';
 @import '_exapmle';
 @import '_service';
+@import '_book';
+@import '_footer';
+@import '_about';
+@import '_reviews';
+
+@font-face {
+    font-family: Stolzl;
+    src: url(../fonts/ofont.ru_Stolzl.ttf);
+}
+@font-face {
+    font-family: ClassicaTwo;
+    src: url(../fonts/Classica\ Two.ttf);
+}
+@font-face {
+    font-family: KonkordRetro;
+    src: url(../fonts/Konkord-Retro.ttf);
+}
+@font-face {
+    font-family: scriptorama;
+    src: url(../fonts/scriptorama.ttf);
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
 *{padding: 0;margin: 0;border: 0;}
@@ -10,7 +31,7 @@
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
 nav,footer,header,aside{display: block;}
-html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color: transparent;scroll-behavior: smooth;}
 input,button,textarea{font-family:inherit;}
 input::-ms-clear{display: none;}
 button{cursor: pointer;}
@@ -23,11 +44,13 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 /*--------------------*/
 
 body{
-    background-color: #3B322D;
+    background-color: #e7dacd;
     color: #EFE7E2;
     font-size: 16px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-family: 'Roboto Condensed';
+    font-family: Stolzl;
+    
 }
 .wrapper {
     max-width: 1920px;
@@ -42,7 +65,7 @@ body{
 }
 .headerall {
     text-align: center;
-
+    color: #000;
     // .headerall__head
 
     &__head {
