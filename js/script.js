@@ -39,3 +39,15 @@ hrefAll.forEach(function(item){
 //   buttonGallery.classList.add('bottom-hide')
 //   console.log('no')
 // })
+// ==================================gallery previews
+const galleryBlock = document.querySelector('.gallery__list');
+const galleryItem = document.querySelectorAll('.gallery__item');
+
+const galleryPreviews = document.querySelector('.previews__block');
+
+galleryItem.forEach(function(item){
+  item.addEventListener('click', function(){
+    galleryBlock.classList.toggle('previewBlock')
+    galleryPreviews.classList.toggle('none')
+  })
+})

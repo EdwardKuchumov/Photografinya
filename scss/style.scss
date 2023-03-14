@@ -94,6 +94,13 @@ body{
 .none{
     display: none;
 }
+.previewBlock{
+    grid-template-columns: repeat(6, 1fr);
+    
+}
+.previewItem{
+    transform: scale(1);
+}
 @media (max-width: 780px){
     .header__navBlock{
         display: none;
