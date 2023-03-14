@@ -17,12 +17,25 @@ let swiper = new Swiper(".mySwiper", {
 // ==================================burger
 const burgerButton = document.querySelector('.header__burger-icoblock');
 const burgerBlock = document.querySelector('.header__burgerBlock');
-const hrefAll = document.querySelectorAll('.header__itemLink')
+const hrefAll = document.querySelectorAll('.header__itemLink');
 burgerButton.addEventListener('click', function(){
   burgerBlock.classList.toggle('hidden');
 }) 
 hrefAll.forEach(function(item){
   item.addEventListener('click', function(){
-    burgerBlock.classList.toggle('hidden');
+    burgerBlock.classList.add('hidden');
   })
 })
+
+// ====================================prise hover
+// const galleryItem = document.querySelector('.gallery__one');
+// const buttonGallery = document.querySelector('.gallery__item-more')
+// galleryItem.addEventListener("mouseenter", function(event){
+
+//   buttonGallery.classList.remove('bottom-hide')
+  
+// })
+// galleryItem.addEventListener("mouseout", function(event){
+//   buttonGallery.classList.add('bottom-hide')
+//   console.log('no')
+// })

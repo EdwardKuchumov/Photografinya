@@ -340,9 +340,17 @@
   padding-bottom: 60px;
   text-align: center;
   gap: 20px;
-}
-.service__item {
   position: relative;
+}
+.service__one {
+  position: relative;
+  box-shadow: 0 0 5px #000;
+  transition: 0.5s;
+}
+.service__one:hover {
+  box-shadow: 0 0 20px #000;
+  transition: 0.5s;
+  transform: scale(1.08);
 }
 .service__img {
   -o-object-fit: cover;
@@ -351,7 +359,8 @@
 }
 .service__item-head {
   color: #000;
-  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
   font-size: 16px;
 }
 .service__item-more {
@@ -370,6 +379,22 @@
   color: #000;
   transition: all 0.5s;
   box-shadow: 0 0 10px #ffffff;
+}
+.service__text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-top: 50%;
+}
+.service__text p {
+  padding-left: 10px;
+  text-shadow: 0 0 10px #000;
+  font-size: 18px;
+  padding-bottom: 30px;
 }
 
 .blocks__book {
@@ -523,6 +548,61 @@ svg {
   padding-top: 20px;
 }
 
+.gallery__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  align-self: center;
+  padding-bottom: 60px;
+  text-align: center;
+  gap: 30px;
+  position: relative;
+}
+.gallery__item-head {
+  color: #000;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  font-size: 16px;
+  text-align: center;
+}
+.gallery__one {
+  position: relative;
+  box-shadow: 0 0 5px #000;
+  transition: 0.5s;
+}
+.gallery__one:hover {
+  box-shadow: 0 0 20px #000;
+  transition: 0.5s;
+  transform: scale(1.08);
+}
+.gallery__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.gallery__item-more {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  transition: all 0.5s;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.gallery__item-more:hover {
+  background-color: #fff;
+  color: #000;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px #ffffff;
+}
+
+.bottom-hide {
+  bottom: 0%;
+  opacity: 0;
+}
+
 @font-face {
   font-family: Stolzl;
   src: url(../fonts/ofont.ru_Stolzl.ttf);
@@ -658,6 +738,10 @@ body {
   transition: 1s;
 }
 
+.none {
+  display: none;
+}
+
 @media (max-width: 780px) {
   .header__navBlock {
     display: none;
@@ -665,7 +749,8 @@ body {
   .header__burger-icoblock {
     display: block;
   }
-  .service__list {
+  .service__list,
+  .gallery__list {
     grid-template-columns: repeat(1, 1fr);
   }
   .blocks__head {

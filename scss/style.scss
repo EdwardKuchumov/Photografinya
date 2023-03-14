@@ -7,6 +7,7 @@
 @import '_footer';
 @import '_about';
 @import '_reviews';
+@import '_gallery';
 
 @font-face {
     font-family: Stolzl;
@@ -90,6 +91,9 @@ body{
     top: -300px;
     transition: 1s;
 }
+.none{
+    display: none;
+}
 @media (max-width: 780px){
     .header__navBlock{
         display: none;
@@ -97,7 +101,8 @@ body{
     .header__burger-icoblock{
         display: block;
     }
-    .service__list{
+    .service__list,
+    .gallery__list{
         grid-template-columns: repeat(1, 1fr);
     }
     .blocks__head{
