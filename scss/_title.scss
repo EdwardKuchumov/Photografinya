@@ -18,17 +18,18 @@
         opacity: 0;
         padding-left: 50px;
         text-align-last: left;
-        padding-top: 40px;
         font-weight: 900;
         font-size: 70px;
         line-height: 110%;
         color: #baa192;
         animation: slideFORleft 1s ease forwards;
+        padding-top: 20px;
     }
 
     // .blocks__text
 
     &__text {
+        padding-left: 10px;
         padding-top: 100px;
         font-weight: 400;
         font-size: 18px;

@@ -84,12 +84,18 @@ body{
     }
 }
 .blocks{
-    padding: 120px 5px;
+    padding: 100px 5px;
 }
-
+.hidden{
+    top: -300px;
+    transition: 1s;
+}
 @media (max-width: 780px){
-    .header__nav{
+    .header__navBlock{
         display: none;
+    }
+    .header__burger-icoblock{
+        display: block;
     }
     .service__list{
         grid-template-columns: repeat(1, 1fr);

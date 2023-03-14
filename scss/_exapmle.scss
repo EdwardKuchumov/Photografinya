@@ -59,6 +59,7 @@
         background-color: #000000;
         .example__button-link{
             color: #ffffff;
+            box-shadow: 0 0 20px #000000;
         }
     }
     &__button2:hover{
@@ -66,6 +67,7 @@
         background-color: #000000;
         .example__button-link{
             color: #ffffff;
+            box-shadow: 0 0 20px #000000;
         }
     }
 
@@ -82,6 +84,7 @@
         line-height: 152%;
         color: #000;
         transition: all 0.5s;
+        
     }
 
     // .example__button2

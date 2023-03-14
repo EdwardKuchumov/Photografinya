@@ -31,6 +31,7 @@
         display: flex;
         flex-direction: column;
         align-items: start;
+        width: 50%;
     }
     &__email {
         padding-top: 20px;
@@ -44,6 +45,7 @@
         display: flex;
         flex-direction: column;
         align-items: start;
+        width: 50%;
     }
     // .book__buttons
 
@@ -69,14 +71,15 @@
         background-color: #fff;
         color: #000;
         transition: all 0.5s;
+        box-shadow: 0 0 20px #fff;
     }
 }
 input{
-    background-color: #000;
+    background-color: #ffffff;
     padding: 10px;
-    
+    box-shadow: 0 0 10px #fff;
     width: 100%;
-    color: #ffff;
+    color: #000000;
 }
 label{
     padding-bottom: 10px;
@@ -87,3 +90,49 @@ svg{
     height: 20px;
     margin-bottom: 8px;
 }
+.contancts {
+    
+    // .contancts__head
+
+    &__head {
+        padding-top: 60px;
+    }
+
+    // .contancts__block
+
+    &__block {
+    }
+
+    // .contancts__list
+
+    &__list {
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        gap: 20px;
+    }
+
+    // .contancts__item
+
+    &__item {
+        border: 1px solid#ffff;
+        color: #000;
+        box-shadow: 0 0 10px #fff;
+        width: 100%;
+        padding: 20px 0;
+    }
+    &__item svg{
+        width: 50px;
+        height: 50px;
+        
+    }
+    // .contancts__number
+
+    &__number {
+        padding-top: 20px;
+        display: block;
+        text-shadow: 0 0 5px #000000;
+    }
+}
+

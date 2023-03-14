@@ -1,23 +1,4 @@
-// const swiper = new Swiper('.swiper', {
-//     // Optional parameters
-//     spaceBetween: 30,
 
-//     // If we need pagination
-//     pagination: {
-//       el: '.swiper-pagination',
-//     },
-  
-//     // Navigation arrows
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-//     mousewhell: true,
-//     keyboard: true,
-  
-//     // And if we need scrollbar
-
-//   });
 let swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
   spaceBetween: 0,
@@ -33,3 +14,15 @@ let swiper = new Swiper(".mySwiper", {
     disableOnInteraction: false,
   },
 });
+// ==================================burger
+const burgerButton = document.querySelector('.header__burger-icoblock');
+const burgerBlock = document.querySelector('.header__burgerBlock');
+const hrefAll = document.querySelectorAll('.header__itemLink')
+burgerButton.addEventListener('click', function(){
+  burgerBlock.classList.toggle('hidden');
+}) 
+hrefAll.forEach(function(item){
+  item.addEventListener('click', function(){
+    burgerBlock.classList.toggle('hidden');
+  })
+})

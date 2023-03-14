@@ -10,13 +10,18 @@
   background-color: #e7dacd;
   text-transform: uppercase;
   font-weight: 900;
-  padding: 30px 0px;
+  padding: 20px 0px;
+  border-bottom: 1px solid #ffffff;
+  box-shadow: 0 0 20px #fff;
 }
 .header__block {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  top: 10px;
+  padding: 0 5px;
 }
 .header__list {
   display: flex;
@@ -36,6 +41,7 @@
 }
 .header__itemLink:hover {
   transition: all 0.5s;
+  box-shadow: 0 0 20px #fff;
   background-color: #fff;
   color: #000;
 }
@@ -44,6 +50,8 @@
   align-items: center;
   gap: 10px;
   animation: slideFORright 1s ease forwards;
+  position: relative;
+  z-index: 22;
 }
 .header__contactVK {
   display: flex;
@@ -94,6 +102,56 @@
     opacity: 1;
   }
 }
+.header__burgerBlock {
+  position: absolute;
+  z-index: 20;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #e7dacd;
+  width: 100%;
+  border-bottom: 1px solid #ffffff;
+  transition: 1s;
+}
+.header__burgerlist {
+  text-align: center;
+}
+.header__item {
+  padding-bottom: 20px;
+}
+.header__burger-ico {
+  cursor: pointer;
+  position: relative;
+  background-color: #000;
+  width: 30px;
+  height: 3px;
+  box-shadow: 0 0 5px #000;
+}
+.header__burger-ico::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  background-color: #000;
+  width: 30px;
+  height: 3px;
+  box-shadow: 0 0 5px #000;
+}
+.header__burger-ico::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  background-color: #000;
+  width: 30px;
+  height: 3px;
+  box-shadow: 0 0 5px #000;
+}
+.header__burger-icoblock {
+  display: none;
+  position: relative;
+  z-index: 25;
+  padding: 15px 0;
+}
+
 .blocks {
   position: relative;
   top: 0;
@@ -110,14 +168,15 @@
   padding-left: 50px;
   -moz-text-align-last: left;
        text-align-last: left;
-  padding-top: 40px;
   font-weight: 900;
   font-size: 70px;
   line-height: 110%;
   color: #baa192;
   animation: slideFORleft 1s ease forwards;
+  padding-top: 20px;
 }
 .blocks__text {
+  padding-left: 10px;
   padding-top: 100px;
   font-weight: 400;
   font-size: 18px;
@@ -196,6 +255,7 @@
 }
 .example__button1:hover .example__button-link {
   color: #ffffff;
+  box-shadow: 0 0 20px #000000;
 }
 .example__button2:hover {
   transition: all 0.5s;
@@ -203,6 +263,7 @@
 }
 .example__button2:hover .example__button-link {
   color: #ffffff;
+  box-shadow: 0 0 20px #000000;
 }
 .example__button-link {
   display: block;
@@ -308,6 +369,7 @@
   background-color: #fff;
   color: #000;
   transition: all 0.5s;
+  box-shadow: 0 0 10px #ffffff;
 }
 
 .blocks__book {
@@ -332,6 +394,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
+  width: 50%;
 }
 .book__email {
   padding-top: 20px;
@@ -345,6 +408,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
+  width: 50%;
 }
 .book__buttons {
   text-align: center;
@@ -365,13 +429,15 @@
   background-color: #fff;
   color: #000;
   transition: all 0.5s;
+  box-shadow: 0 0 20px #fff;
 }
 
 input {
-  background-color: #000;
+  background-color: #ffffff;
   padding: 10px;
+  box-shadow: 0 0 10px #fff;
   width: 100%;
-  color: white;
+  color: #000000;
 }
 
 label {
@@ -383,6 +449,33 @@ svg {
   width: 20px;
   height: 20px;
   margin-bottom: 8px;
+}
+
+.contancts__head {
+  padding-top: 60px;
+}
+.contancts__list {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  gap: 20px;
+}
+.contancts__item {
+  border: 1px solid white;
+  color: #000;
+  box-shadow: 0 0 10px #fff;
+  width: 100%;
+  padding: 20px 0;
+}
+.contancts__item svg {
+  width: 50px;
+  height: 50px;
+}
+.contancts__number {
+  padding-top: 20px;
+  display: block;
+  text-shadow: 0 0 5px #000000;
 }
 
 .footer__block {
@@ -557,12 +650,20 @@ body {
 }
 
 .blocks {
-  padding: 120px 5px;
+  padding: 100px 5px;
+}
+
+.hidden {
+  top: -300px;
+  transition: 1s;
 }
 
 @media (max-width: 780px) {
-  .header__nav {
+  .header__navBlock {
     display: none;
+  }
+  .header__burger-icoblock {
+    display: block;
   }
   .service__list {
     grid-template-columns: repeat(1, 1fr);
