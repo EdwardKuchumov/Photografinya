@@ -9,7 +9,7 @@
         background: url(../img/4JLweDEwq30.jpg) center no-repeat;
         background-size: cover;
         text-align: center;
-        padding-bottom: 29%;
+        padding-top: 29%;
     }
 
     // .blocks__head
@@ -24,6 +24,9 @@
         color: #baa192;
         animation: slideFORleft 1s ease forwards;
         padding-top: 20px;
+    }
+    &__logo-link{
+        width: 500px;
     }
 
     // .blocks__text

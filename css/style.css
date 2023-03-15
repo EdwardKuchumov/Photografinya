@@ -10,20 +10,25 @@
   background-color: #e7dacd;
   text-transform: uppercase;
   font-weight: 900;
-  padding: 20px 0px;
   border-bottom: 1px solid #ffffff;
   box-shadow: 0 0 20px #fff;
 }
 .header__block {
-  height: 100%;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  top: 10px;
   padding: 0 5px;
 }
+.header__navBlock {
+  height: 100%;
+}
+.header__nav {
+  height: 100%;
+}
 .header__list {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,9 +121,6 @@
 .header__burgerlist {
   text-align: center;
 }
-.header__item {
-  padding-bottom: 20px;
-}
 .header__burger-ico {
   cursor: pointer;
   position: relative;
@@ -161,7 +163,7 @@
   background: url(../img/4JLweDEwq30.jpg) center no-repeat;
   background-size: cover;
   text-align: center;
-  padding-bottom: 29%;
+  padding-top: 29%;
 }
 .blocks__head {
   opacity: 0;
@@ -174,6 +176,9 @@
   color: #baa192;
   animation: slideFORleft 1s ease forwards;
   padding-top: 20px;
+}
+.blocks__logo-link {
+  width: 500px;
 }
 .blocks__text {
   padding-left: 10px;
@@ -337,7 +342,7 @@
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   align-self: center;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   text-align: center;
   gap: 20px;
   position: relative;
@@ -603,6 +608,10 @@ svg {
   opacity: 0;
 }
 
+.boxshadow {
+  box-shadow: 0 0 20px 20px #000000;
+}
+
 .previews__block {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -768,9 +777,11 @@ body {
   .header__burger-icoblock {
     display: block;
   }
-  .service__list,
-  .gallery__list {
+  .service__list {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .gallery__list {
+    grid-template-rows: repeat(2, 1fr);
   }
   .blocks__head {
     font-size: 30px;

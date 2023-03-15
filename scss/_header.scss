@@ -9,20 +9,19 @@
     background-color: #e7dacd;
     text-transform: uppercase;
     font-weight: 900;
-    padding: 20px 0px;
-    
     border-bottom: 1px solid #ffffff;
     box-shadow: 0 0 20px #fff;
+    
 
     // .header__block
 
     &__block {
-        height: 100%;
+        height: 60px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         position: relative;
-        top: 10px;
+        
         padding: 0 5px;
     }
 
@@ -32,18 +31,20 @@
     // .header__navBlock
 
     &__navBlock {
-        
+        height: 100%;
+
     }
 
     // .header__nav
 
     &__nav {
-
+        height: 100%;
     }
 
     // .header__list
 
     &__list {
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -185,7 +186,7 @@
     // .header__item
 
     &__item {
-        padding-bottom: 20px;
+        
     }
 
     // .header__itemLink

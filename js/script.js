@@ -43,11 +43,36 @@ hrefAll.forEach(function(item){
 const galleryBlock = document.querySelector('.gallery__list');
 const galleryItem = document.querySelectorAll('.gallery__item');
 
-const galleryPreviews = document.querySelector('.previews__block');
+const galleryPreviews = document.querySelectorAll('.previews__block');
+const galleryOne = document.querySelectorAll('.gallery__one')
+let numItem = 0;
 
-galleryItem.forEach(function(item){
+galleryOne.forEach(function(item, index){
+  
   item.addEventListener('click', function(){
-    galleryBlock.classList.toggle('previewBlock')
-    galleryPreviews.classList.toggle('none')
+    galleryOne.forEach(function(item){
+      item.classList.remove('boxshadow')
+    })
+    item.classList.add('boxshadow')
+    galleryBlock.classList.add('previewBlock')
+    numItem = index;
+    // console.log(numItem)
+    previewBlockImg(numItem)
   })
 })
+// console.log(numItem)
+
+function previewBlockImg(index){
+  console.log(index)
+  galleryPreviews.forEach(function(item){
+    item.classList.add('none')
+  })
+  galleryPreviews[index].classList.remove('none')
+}
+
+// function thisCircleSlide(index){
+//   circleItem.forEach(function(item){
+//     item.classList.remove('color-circle')
+//   })
+//   circleItem[index].classList.add('color-circle')
+// }

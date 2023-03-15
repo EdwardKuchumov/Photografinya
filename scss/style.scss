@@ -108,9 +108,12 @@ body{
     .header__burger-icoblock{
         display: block;
     }
-    .service__list,
-    .gallery__list{
+    .service__list{
         grid-template-columns: repeat(1, 1fr);
+    }
+    .gallery__list{
+        // grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(2, 1fr);
     }
     .blocks__head{
         font-size: 30px;
