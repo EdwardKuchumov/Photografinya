@@ -14,6 +14,7 @@ let swiper = new Swiper(".mySwiper", {
     disableOnInteraction: false,
   },
 });
+
 // ==================================burger
 const burgerButton = document.querySelector('.header__burger-icoblock');
 const burgerBlock = document.querySelector('.header__burgerBlock');
@@ -48,31 +49,54 @@ const galleryOne = document.querySelectorAll('.gallery__one')
 let numItem = 0;
 
 galleryOne.forEach(function(item, index){
-  
   item.addEventListener('click', function(){
     galleryOne.forEach(function(item){
       item.classList.remove('boxshadow')
     })
     item.classList.add('boxshadow')
     galleryBlock.classList.add('previewBlock')
+    // if (galleryBlock.classList.contains('previewBlock')){
+    //   document.querySelector('.gallery__block').classList.add('mySwiperGallery')
+    // } else{
+    //   document.querySelector('.gallery__block').classList.remove('mySwiperGallery')
+    // }
     numItem = index;
-    // console.log(numItem)
     previewBlockImg(numItem)
   })
 })
-// console.log(numItem)
-
+let dobyWidth = document.body.offsetWidth;
+if (dobyWidth > 922){
+  galleryItem.forEach(function(el){
+    el.classList.remove('swiper-slide')
+  })
+  galleryBlock.classList.remove('swiper-wrapper')
+  galleryBlock.classList.add('galleryList')
+  document.querySelector('.gallery__block').classList.remove('mySwiperGallery')
+  document.querySelectorAll('.gallery__arrow').forEach(function(el){
+    el.style.display = 'none'
+  })
+}
+console.log(dobyWidth)
 function previewBlockImg(index){
-  console.log(index)
   galleryPreviews.forEach(function(item){
     item.classList.add('none')
   })
   galleryPreviews[index].classList.remove('none')
 }
 
-// function thisCircleSlide(index){
-//   circleItem.forEach(function(item){
-//     item.classList.remove('color-circle')
-//   })
-//   circleItem[index].classList.add('color-circle')
-// }
+
+let swiperGallery = new Swiper(".mySwiperGallery", {
+  slidesPerView: 3,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    580: {
+      slidesPerView: 3,
+    }
+  }
+});
