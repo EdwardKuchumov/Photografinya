@@ -101,6 +101,12 @@ body{
 .previewItem{
     transform: scale(1);
 }
+@media (max-width: 922px){
+    .gallery__list{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
 @media (max-width: 780px){
     .header__navBlock{
         display: none;
@@ -121,5 +127,20 @@ body{
     .example__buttonBlock{
         flex-direction: column;
         align-items: center;
+    }
+}
+@media (max-width: 580px) {
+    .headerall__head{
+        font-size: 24px;
+    }
+    .example__button-link{
+        font-size: 14px;
+    }
+    .example__buttonBlock{
+        gap: 20px;
+        padding: 20px 0;
+    }
+    .blocks{
+        padding-bottom: 30px;
     }
 }
