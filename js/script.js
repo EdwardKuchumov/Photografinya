@@ -13,12 +13,20 @@ let swiper = new Swiper(".mySwiper", {
     stoponLastSlide: true,
     disableOnInteraction: false,
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    580: {
+      slidesPerView: 3,
+    }
+  }
 });
 
 // ==================================burger
 const burgerButton = document.querySelector('.header__burger-icoblock');
 const burgerBlock = document.querySelector('.header__burgerBlock');
-const hrefAll = document.querySelectorAll('.header__itemLink');
+const hrefAll = document.querySelectorAll('.burger__itemLink');
 burgerButton.addEventListener('click', function(){
   burgerBlock.classList.toggle('hidden');
 }) 
@@ -76,7 +84,7 @@ if (dobyWidth > 922){
     el.style.display = 'none'
   })
 }
-console.log(dobyWidth)
+
 function previewBlockImg(index){
   galleryPreviews.forEach(function(item){
     item.classList.add('none')
