@@ -6,10 +6,24 @@
     // .blocks__title
 
     &__title {
-        background: url(../img/4JLweDEwq30.jpg) center no-repeat;
+        // background: url(../img/title-igm.jpg) center no-repeat;
         background-size: cover;
+        position: relative;
         text-align: center;
         padding-top: 29%;
+    }
+    &__title::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: url(../img/title-igm.jpg) center no-repeat;
+        background-size: cover;
+        opacity: 0.7;
+        text-align: center;
+        z-index: -1;
     }
 
     // .blocks__head
@@ -29,6 +43,7 @@
         object-fit: cover;
         width: 100%;
         // width: 500px;
+        filter: invert(1);
     }
 
     // .blocks__text
