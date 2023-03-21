@@ -12,7 +12,6 @@
   font-weight: 900;
   border-bottom: 1px solid #ffffff;
   box-shadow: 0 0 20px #fff;
-  overflow: hidden;
 }
 .header__block {
   height: 60px;
@@ -855,6 +854,9 @@ body {
   .gallery__list {
     padding-left: 0;
     padding-right: 0;
+  }
+  .footer__block .header__block {
+    justify-content: center;
   }
 }
 @media (max-width: 780px) {
